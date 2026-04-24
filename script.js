@@ -47,16 +47,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // Interacción de botones de descarga para confirmar si los archivos no están
-    const btnWin = document.getElementById('btn-win');
-    const btnApk = document.getElementById('btn-apk');
-
-    const checkFile = (e, filename) => {
-        // Esto es un placeholder. En un entorno real, el a href="archivo" hace el trabajo,
-        // pero podemos agregar analíticas o alertas aquí si el archivo no existe aún localmente.
-        console.log(`Intentando descargar ${filename}...`);
-    };
-
-    btnWin.addEventListener('click', (e) => checkFile(e, 'Aether.exe'));
-    btnApk.addEventListener('click', (e) => checkFile(e, 'Aether.apk'));
+    // Los botones de descarga ahora apuntan a GitHub Releases
+    // Ya no se requiere chequeo local.
 });
