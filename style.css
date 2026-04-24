@@ -1,0 +1,325 @@
+:root {
+    --bg-color: #05050A;
+    --card-bg: rgba(20, 20, 30, 0.4);
+    --border-color: rgba(255, 255, 255, 0.08);
+    --primary-neon: #00f0ff;
+    --secondary-neon: #a020f0;
+    --text-main: #ffffff;
+    --text-muted: #a0a0b0;
+    --glass-blur: blur(12px);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-main);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+/* Background Image Overlay generated dynamically */
+.bg-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-image: url('assets/hero_bg.png');
+    background-size: cover;
+    background-position: center;
+    opacity: 0.35;
+    z-index: -1;
+    pointer-events: none;
+}
+
+/* Gradient effect at bottom of overlay */
+.bg-overlay::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 50%;
+    background: linear-gradient(to bottom, transparent, var(--bg-color));
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Typography */
+h1, h2, h3, .logo {
+    font-family: 'Outfit', sans-serif;
+}
+
+.gradient-text {
+    background: linear-gradient(90deg, var(--primary-neon), var(--secondary-neon));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* Navbar */
+.navbar {
+    padding: 20px 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 100;
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.03);
+    transition: all 0.3s ease;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.8rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    background: linear-gradient(135deg, #fff, var(--primary-neon));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    align-items: center;
+}
+
+.nav-links a {
+    color: var(--text-main);
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.95rem;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: var(--primary-neon);
+}
+
+.nav-btn {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid var(--border-color);
+    padding: 8px 20px;
+    border-radius: 50px;
+}
+.nav-btn:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+/* Hero Section */
+.hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    padding-top: 80px;
+    text-align: center;
+}
+
+.hero-content {
+    max-width: 800px;
+    margin: 0 auto;
+    animation: fadeIn 1.2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.hero-title {
+    font-size: 4.5rem;
+    font-weight: 800;
+    line-height: 1.1;
+    margin-bottom: 24px;
+}
+
+.hero-subtitle {
+    font-size: 1.2rem;
+    color: var(--text-muted);
+    margin-bottom: 40px;
+    max-width: 600px;
+    margin-inline: auto;
+}
+
+/* Buttons */
+.hero-actions {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 16px 32px;
+    border-radius: 50px;
+    font-size: 1rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+}
+
+.btn i {
+    font-size: 1.2rem;
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, var(--primary-neon), #00aaff);
+    color: #000;
+    box-shadow: 0 0 20px rgba(0, 240, 255, 0.3);
+}
+
+.btn-primary:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 0 30px rgba(0, 240, 255, 0.5);
+}
+
+.btn-secondary {
+    background: var(--card-bg);
+    color: var(--text-main);
+    border: 1px solid var(--border-color);
+    backdrop-filter: var(--glass-blur);
+}
+
+.btn-secondary:hover {
+    transform: translateY(-3px);
+    background: rgba(255, 255, 255, 0.1);
+    border-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Features Section */
+.features {
+    padding: 100px 0;
+    position: relative;
+    z-index: 2;
+    background: linear-gradient(to bottom, transparent, var(--bg-color) 20%);
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 60px;
+}
+
+.feature-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.feature-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 20px;
+    padding: 40px 30px;
+    backdrop-filter: var(--glass-blur);
+    -webkit-backdrop-filter: var(--glass-blur);
+    transition: all 0.4s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.feature-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at top right, rgba(0, 240, 255, 0.05), transparent 60%);
+    pointer-events: none;
+}
+
+.feature-card:hover {
+    transform: translateY(-10px);
+    border-color: rgba(0, 240, 255, 0.3);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5), 0 0 20px rgba(0, 240, 255, 0.05);
+}
+
+.feature-icon {
+    font-size: 2.5rem;
+    color: var(--primary-neon);
+    margin-bottom: 20px;
+}
+
+.feature-card h3 {
+    font-size: 1.4rem;
+    margin-bottom: 15px;
+}
+
+.feature-card p {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+}
+
+/* Reveal Animation Class */
+.reveal {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 0.8s cubic-bezier(0.5, 0, 0, 1);
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Footer */
+footer {
+    border-top: 1px solid var(--border-color);
+    padding: 40px 0;
+    text-align: center;
+    position: relative;
+    z-index: 2;
+    background: var(--bg-color);
+}
+
+.footer-logo {
+    font-size: 1.5rem;
+    font-family: 'Outfit', sans-serif;
+    font-weight: 700;
+    color: var(--text-muted);
+    margin-bottom: 10px;
+}
+
+footer p {
+    color: rgba(255, 255, 255, 0.4);
+    font-size: 0.9rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .hero-title {
+        font-size: 3rem;
+    }
+    
+    .hero-actions {
+        flex-direction: column;
+    }
+    
+    .nav-links {
+        display: none; /* simple hidden on mobile */
+    }
+}
