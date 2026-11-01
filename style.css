@@ -60,12 +60,6 @@ a { color: inherit; }
 .desktop-proof img { width: 100%; height: auto; display: block; }
 .desktop-proof figcaption { min-height: 37px; display: flex; align-items: center; justify-content: space-between; gap: 10px; padding: 0 12px; border-top: 1px solid #323139; color: #d6d3d9; font-size: 10px; }
 .desktop-proof figcaption span:last-child { color: #93909a; }
-.mobile-proof { min-height: 64px; display: flex; align-items: center; gap: 12px; margin-top: 11px; padding: 9px 12px; border-left: 2px solid var(--violet); background: #17171c; }
-.mobile-proof img { width: 39px; height: 39px; border: 1px solid #40374e; border-radius: 8px; object-fit: cover; }
-.mobile-proof div { display: grid; gap: 2px; }
-.mobile-proof strong { color: #eeeaf3; font: 700 12px/1.3 var(--display); }
-.mobile-proof div span { color: #a5a1ad; font-size: 10px; }
-.mobile-platform { margin-left: auto; color: #a8e4c5; font-size: 10px; font-weight: 700; }
 .hero-foot { display: flex; align-items: center; gap: 12px; padding-top: 47px; color: #aaa7af; font-size: 10px; }
 .hero-foot i { width: 26px; height: 1px; background: #5b5267; }
 
@@ -202,11 +196,6 @@ a { color: inherit; }
   .button { justify-content: flex-start; }
   .button > span { margin-left: auto; }
   .desktop-proof figcaption { font-size: 9px; }
-  .mobile-proof { gap: 9px; padding-inline: 8px; }
-  .mobile-proof img { width: 34px; height: 34px; }
-  .mobile-proof strong { font-size: 11px; }
-  .mobile-proof div span { font-size: 9px; }
-  .mobile-platform { font-size: 9px; }
   .hero-foot { font-size: 8px; }
   .story-copy h3 { font-size: 15px; }
   .story-copy p { font-size: 11px; }
@@ -216,4 +205,125 @@ a { color: inherit; }
   .footer-main { min-height: 68px; gap: 9px; }
   .footer-main > span,.back-top { font-size: 8px; }
   .footer-bottom { font-size: 8px; }
+}
+
+/* Aether landing: full light palette with the product's own dark app surfaces kept intact. */
+:root { color-scheme: light; --paper:#f4f2ec; --paper-deep:#ebe8e0; --paper-line:#d9d5cc; --text:#23212a; --muted:#605d66; --quiet:#77737c; }
+body { color:#27242c; background:#f7f6f2; }
+.site-header { border-bottom-color:#e5e2dc; background:rgba(255,255,255,.96); }
+.brand { color:#25222b; }
+.brand img { border-color:#e4dfec; }
+.nav-links a { color:#55515c; }
+.nav-links a:hover { color:#17151c; }
+.nav-links .nav-download { border-color:#d8cdea; color:#593c94; background:#f3effa; }
+.nav-links .nav-download:hover { border-color:#bba8da; background:#ebe4f6; }
+.menu-toggle { border-color:#dedbe2; background:#fff; }
+.menu-toggle span { background:#28252d; }
+.hero { color:#24212a; background:#fff; }
+.hero-kicker,.section-label { color:#7754b7; }
+.hero h1 { color:#211e27; }
+.hero h1 span { color:#8059c7; }
+.hero-lede { color:#5d5963; }
+.hero-version { color:#74707a; }
+.button-primary { color:#fff; background:#7551b8; }
+.button-primary:hover { background:#6542a8; }
+.button-secondary { border-color:#d8d3de; color:#403b49; background:#fff; }
+.button-secondary:hover { border-color:#b7a9cd; background:#f5f2f8; }
+.hero-foot { color:#696570; }
+.hero-foot i { background:#c6b9d9; }
+.story-section { color:#25222a; background:#f4f2ec; }
+.story-heading h2,.status-heading h2,.download-heading h2 { color:#25222a; }
+.story-heading > p:last-child,.story-copy p { color:#625e67; }
+.story-copy h3 { color:#28242e; }
+.story-platform,.story-index { color:#77717e; }
+.story-row,.story-row:last-of-type { border-color:#d9d5cc; }
+.account-note { color:#625d68; }
+.status-section { color:#29262f; background:#fff; }
+.status-heading > p:last-child { color:#625e68; }
+.status-heading h2 { color:#25222a; }
+.status-heading h2 span { color:#8059c7; }
+.status-list { border-top-color:#dedbe3; }
+.status-row { border-bottom-color:#dedbe3; }
+.status-row h3 { color:#2c2931; }
+.status-row h3 small { color:#7654b2; }
+.status-row p { color:#625e67; }
+.download-section { color:#29262f; border-top-color:#e4e0e8; background:#f4f2ec; }
+.download-heading h2 { color:#25222a; }
+.release-link { color:#6944a8; }
+.release-link:hover { color:#432772; }
+.download-list { border-top-color:#d9d5cc; }
+.download-item { border-bottom-color:#d9d5cc; }
+.download-os,.download-info h3 { color:#28252d; }
+.download-info p { color:#56515c; }
+.download-info small,.release-note { color:#716c76; }
+.download-action { border-color:#7551b8; color:#fff; background:#7551b8; }
+.download-action:hover { background:#6542a8; }
+.android-download .download-action { border-color:#b7d9c2; color:#276b47; background:#e8f4ec; }
+.android-download .download-action:hover { background:#d8ebdf; }
+.release-note strong { color:#634295; }
+.footer { border-top-color:#e5e2dc; background:#fff; }
+.footer-main > span { color:#6b6671; }
+.back-top { color:#6944a8; }
+.back-top:hover { color:#432772; }
+.footer-bottom { border-top-color:#e9e6e0; color:#7a7580; }
+
+.product-pair { display:grid; grid-template-columns:minmax(0,1fr) 232px; align-items:center; gap:13px; }
+.desktop-proof { border-color:#3b3942; box-shadow:0 12px 32px rgba(28,22,39,.12); }
+.mobile-showcase { width:100%; margin:0; }
+.phone-frame { padding:7px; border:1px solid #aaa8b1; border-radius:28px; background:#17171d; box-shadow:0 14px 34px rgba(24,19,34,.18); }
+.phone-screen { min-height:476px; position:relative; overflow:hidden; padding:10px 11px 8px; border:1px solid #34343d; border-radius:21px; color:#f3f3f6; background:#0d0e13; }
+.mobile-statusbar { height:15px; display:flex; justify-content:space-between; align-items:center; padding:0 3px; color:#e7e5eb; font-size:8px; font-weight:600; }
+.mobile-status-icons { display:flex; align-items:center; gap:4px; }
+.mobile-status-icons i { width:7px; height:6px; display:block; border:1px solid #b8bac5; border-radius:2px; }
+.mobile-status-icons i:first-child { width:10px; border:0; border-radius:0; background:linear-gradient(160deg,transparent 45%,#bbc0cb 47% 60%,transparent 62%),linear-gradient(180deg,transparent 32%,#bbc0cb 34% 48%,transparent 50%); }
+.mobile-status-icons i:nth-child(2) { width:8px; height:6px; border:0; border-top:1.5px solid #bbc0cb; border-radius:50%; }
+.mobile-status-icons i:last-child { position:relative; }
+.mobile-status-icons i:last-child::after { position:absolute; inset:1px 2px; content:""; border-radius:1px; background:#58d29b; }
+.mobile-home { padding-top:12px; }
+.mobile-app-header { display:flex; align-items:center; justify-content:space-between; gap:8px; }
+.mobile-app-header strong { display:block; color:#f4f2f7; font:700 12px/1.25 "Manrope","Segoe UI",sans-serif; letter-spacing:.14em; }
+.mobile-app-header strong em { display:inline-block; vertical-align:2px; margin-left:2px; padding:3px 4px; border-radius:4px; color:#fff; background:#45424d; font:800 5px/1 "Inter","Segoe UI",sans-serif; letter-spacing:.04em; font-style:normal; }
+.mobile-app-header span { display:block; margin-top:4px; color:#76a9f4; font-size:6px; font-weight:800; letter-spacing:.13em; }
+.mobile-avatar { width:27px; height:27px; display:grid!important; place-items:center; margin:0!important; border:1px solid rgba(139,92,246,.45); border-radius:50%; color:#eee8fa!important; background:#211b2c; font-size:10px!important; font-weight:700!important; }
+.mobile-nexus { margin-top:15px; padding:12px 11px 10px; border:1px solid #2b2d36; border-radius:13px; background:linear-gradient(145deg,#191b22,#121319); }
+.mobile-nexus-top { display:flex; align-items:center; justify-content:space-between; color:#a5a5af; font-size:6px; font-weight:800; letter-spacing:.09em; }
+.mobile-nexus-top span:last-child { color:#a891df; font-size:13px; }
+.mobile-nexus h2 { margin:10px 0 3px; color:#f0eef4; font:700 13px/1.3 "Manrope","Segoe UI",sans-serif; }
+.mobile-nexus h2 span { float:right; color:#93919c; }
+.mobile-nexus p { margin:0; color:#93939e; font-size:7px; line-height:1.45; }
+.mobile-power-actions { display:flex; gap:6px; margin-top:10px; }
+.mobile-power-actions span { flex:1; padding:6px 3px; border:1px solid #33343d; border-radius:5px; color:#c5c3cc; font-size:6px; font-weight:700; text-align:center; }
+.mobile-section-title { margin:16px 1px 8px; color:#b3b1bc; font-size:7px; font-weight:800; letter-spacing:.1em; }
+.mobile-actions { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:7px; }
+.mobile-action { min-height:48px; display:flex; align-items:center; gap:7px; padding:7px; border:1px solid #2c2e37; border-radius:8px; background:#17181f; }
+.mobile-action b { color:#e0dee5; font-size:6px; font-weight:700; letter-spacing:.025em; }
+.action-symbol { width:23px; height:23px; flex:0 0 auto; display:grid; place-items:center; border-radius:7px; font-size:13px; font-weight:700; }
+.action-symbol svg { width:14px; height:14px; fill:none; stroke:currentColor; stroke-width:1.8; stroke-linecap:round; stroke-linejoin:round; }
+.violet-symbol svg { fill:currentColor; stroke:none; }
+.violet-symbol { color:#b69af5; background:#29223a; }
+.amber-symbol { color:#ecc27b; background:#30281c; }
+.green-symbol { color:#58d29b; background:#1e3027; }
+.coral-symbol { color:#f27e81; background:#352326; }
+.blue-symbol { color:#82b5fa; background:#202d41; }
+.muted-symbol { color:#a6a7b0; background:#25262d; }
+.mobile-action-locked { border-style:dashed; background:#14151a; }
+.mobile-action small { display:block; margin-top:2px; color:#96939e; font-size:5px; font-weight:600; }
+.mobile-next-section { display:flex; justify-content:space-between; margin:13px 1px 0; padding-top:9px; border-top:1px solid #2c2e37; color:#aaa8b3; font-size:6px; font-weight:800; letter-spacing:.08em; }
+.phone-gesture { width:58px; height:3px; margin:12px auto 0; border-radius:4px; background:#74747d; }
+.mobile-showcase figcaption { min-height:32px; display:flex; align-items:center; justify-content:space-between; gap:7px; padding:0 3px; color:#625d69; font-size:9px; }
+.mobile-showcase figcaption span:last-child { color:#817b87; font-size:8px; }
+@media (max-width:920px) {
+  .product-pair { grid-template-columns:1fr; gap:16px; }
+  .mobile-showcase { width:min(100%,258px); margin:0 auto; }
+}
+@media (min-width:561px) and (max-width:700px) {
+  .menu-toggle { display:none; }
+  .nav-links { position:static; display:flex; align-items:center; gap:13px; padding:0; border:0; background:transparent; box-shadow:none; }
+  .nav-links a { padding:0; border-radius:0; font-size:10px; }
+  .nav-links .nav-download { min-height:34px; margin:0; padding:0 9px; border:1px solid #d8cdea; border-radius:5px; }
+}
+@media (max-width:480px) {
+  .phone-screen { min-height:0; padding:10px 11px 8px; }
+  .mobile-actions { gap:6px; }
+  .mobile-action { min-height:45px; }
 }
