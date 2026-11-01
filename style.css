@@ -210,3 +210,136 @@ h1 { margin: 25px 0 21px; font-size: clamp(58px,6.6vw,86px); font-weight: 700; l
 @media (max-width: 420px) {
   .feature-heading h2 { font-size: 39px; }.feature-spotlight { min-height: 325px; }.spotlight-orbit { top: 51px; right: -14px; transform: scale(.65); }.feature-row { grid-template-columns: 35px minmax(0,1fr); }.feature-row > .status-chip { grid-column: 2; justify-self: start; margin-top: -3px; }.status-main h3 { font-size: 11px; }.download-content { padding: 15px; border-radius: 14px; }.download-grid { grid-template-columns: 1fr; }.download-card { padding: 16px; }.download-footer { align-items: flex-start; flex-direction: column; gap: 7px; }
 }
+
+/* Aether product story: inherit the app's graphite/violet system and favor clarity over ornament. */
+.feature-section {
+  padding: 96px 0 102px;
+  border-block: 1px solid #20232b;
+  background: #090a0e;
+}
+.feature-section::before { display: none; }
+.feature-heading { margin-bottom: 35px; }
+.feature-heading h2 { max-width: 700px; font-size: clamp(42px,4.8vw,60px); line-height: 1.04; letter-spacing: -.065em; }
+.feature-heading > p { max-width: 420px; color: #a2a9b6; font-size: 15px; line-height: 1.7; }
+.feature-platforms { display: grid; grid-template-columns: minmax(0,1fr) 102px minmax(0,1fr); align-items: stretch; gap: 0; }
+.platform-detail { min-height: 294px; padding: 26px 28px 25px; border: 1px solid #292d37; border-radius: 12px; background: #0e1015; }
+.desktop-detail { border-top: 2px solid #6aa8ff; }
+.mobile-detail { border-top: 2px solid #9d7bfb; }
+.platform-detail-top { display: flex; align-items: center; gap: 10px; }
+.platform-index { color: #868d9a; font: 600 11px/1 "Manrope",sans-serif; font-variant-numeric: tabular-nums; }
+.platform-kind { color: #a2a9b6; font-size: 10px; font-weight: 700; letter-spacing: .13em; }
+.platform-detail-top .platform-logo { width: 23px; height: 23px; margin-left: auto; }
+.platform-detail h3 { margin: 24px 0 7px; font-size: 25px; line-height: 1.15; letter-spacing: -.045em; }
+.platform-detail > p { max-width: 430px; margin: 0; color: #b3b8c2; font-size: 14px; line-height: 1.65; }
+.platform-detail ul { display: grid; gap: 8px; margin: 18px 0 0; padding: 0; list-style: none; }
+.platform-detail li { position: relative; padding-left: 19px; color: #d0d3da; font-size: 13px; line-height: 1.55; }
+.platform-detail li::before { position: absolute; top: .52em; left: 1px; width: 7px; height: 7px; border: 1px solid #a991e6; border-radius: 50%; content: ""; }
+.account-bridge { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 10px; }
+.bridge-line { width: 1px; height: 38px; background: linear-gradient(180deg,transparent,#55416f,transparent); }
+.bridge-mark { width: 34px; height: 34px; display: grid; place-items: center; border: 1px solid #433651; border-radius: 10px; color: #d0baf4; background: #17131d; }
+.bridge-mark svg { width: 17px; height: 17px; fill: none; stroke: currentColor; stroke-width: 1.5; stroke-linecap: round; stroke-linejoin: round; }
+.bridge-caption { color: #b5a6cf; font-size: 8px; font-weight: 800; letter-spacing: .1em; text-align: center; }
+
+.status-section { padding: 82px 0 88px; border-block: 1px solid #20232b; background: #0b0c11; }
+.status-inner { grid-template-columns: minmax(230px,.7fr) minmax(0,1.3fr); gap: clamp(38px,6vw,76px); }
+.status-copy { position: static; }
+.status-copy h2 { margin: 15px 0 17px; font-size: clamp(39px,4.3vw,54px); line-height: 1.04; letter-spacing: -.065em; }
+.status-copy p { max-width: 360px; color: #b0b5bf; font-size: 14px; line-height: 1.7; }
+.status-key { display: flex; flex-direction: column; gap: 11px; margin-top: 23px; color: #c3c7cf; font-size: 12px; }
+.key-dot { width: 8px; height: 8px; flex: 0 0 auto; }
+.status-list { overflow: hidden; border: 1px solid #2a2e38; border-radius: 12px; background: #0e1015; }
+.status-row { min-height: 0; grid-template-columns: 9px minmax(0,1fr); align-items: start; gap: 14px; padding: 17px 19px; border-bottom-color: #242832; }
+.state-dot { width: 8px; height: 8px; margin-top: 6px; }
+.status-main > div { display: flex; align-items: center; flex-wrap: wrap; gap: 9px; }
+.status-main h3 { margin: 0; color: #f0f1f4; font-size: 14px; line-height: 1.4; letter-spacing: -.015em; }
+.status-main p { margin: 5px 0 0; color: #b0b5bf; font-size: 13px; line-height: 1.6; }
+.state-label { padding: 5px 7px; font-size: 9px; letter-spacing: .08em; }
+
+.download-section { display: block; padding: 72px 0 78px; border-top: 1px solid #332746; background: radial-gradient(ellipse at 8% 16%,rgba(88,61,135,.16),transparent 45%),#090a0e; }
+.download-content { grid-template-columns: minmax(220px,.7fr) minmax(0,1.3fr); gap: 23px 38px; padding: 29px; border: 1px solid #3a3049; border-radius: 14px; background: #0e1015; box-shadow: none; }
+.download-heading .eyebrow { color: #c4b5fd; font-size: 10px; }
+.download-mark { width: 7px; height: 7px; border-radius: 50%; background: #a78bfa; box-shadow: none; }
+.download-heading h2 { margin: 15px 0 13px; font-size: clamp(38px,4vw,51px); line-height: 1; }
+.download-heading > p { max-width: 330px; color: #b0b5bf; font-size: 14px; line-height: 1.65; }
+.release-link { min-height: 40px; gap: 8px; margin-top: 12px; color: #d3c2f1; font-size: 12px; }
+.download-grid { gap: 12px; }
+.download-card { min-width: 0; padding: 19px; border-color: #343842; border-radius: 10px; background: #111319; box-shadow: none; }
+.windows-download { border-color: #57436e; }
+.download-card-top { min-height: 27px; }
+.download-platform { color: #c1c5ce; font-size: 10px; letter-spacing: .09em; }
+.platform-logo { width: 21px; height: 21px; }
+.current-pill { padding: 5px 8px; font-size: 9px; }
+.download-card h3 { margin: 16px 0 6px; font-size: 19px; }
+.download-card > p { min-height: 42px; margin: 0; color: #b5bac4; font-size: 13px; line-height: 1.6; }
+.version-line { gap: 10px; margin: 14px 0 12px; padding-top: 12px; }
+.version-line span:first-child { color: #9ca3af; font-size: 9px; }
+.version-line strong { color: #f1edf9; font-size: 13px; }
+.version-line .release-date { color: #9ca3af; font-size: 9px; }
+.download-button { min-height: 46px; font-size: 12px; }
+.windows-download .button-primary { background: #8056d9; border-color: #9a77e9; box-shadow: none; }
+.windows-download .button-primary:hover { background: #9069e7; }
+.android-download .button-outline { color: #eeeaf9; background: #19161f; border-color: #554965; }
+.file-note { margin-top: 12px; color: #b0b5bf; font-size: 11px; line-height: 1.55; }
+.file-note b { color: #e2e4e9; font-size: 11px; font-weight: 600; }
+.download-footer { grid-column: 1/-1; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 10px 18px; padding-top: 15px; border-top: 1px solid #2d2934; color: #b1b4bd; font-size: 11px; }
+.release-indicator { gap: 8px; color: #d0c1e8; font-size: 10px; letter-spacing: .06em; }
+
+.footer-main p { font-size: 12px; }
+.back-top { font-size: 10px; }
+.footer-bottom { font-size: 10px; }
+
+@media (max-width: 940px) {
+  .feature-heading { display: block; }
+  .feature-heading > p { max-width: 540px; margin: 15px 0 0; }
+  .feature-platforms { grid-template-columns: minmax(0,1fr) 76px minmax(0,1fr); }
+  .platform-detail { padding: 22px; }
+  .download-content { gap: 22px; padding: 23px; }
+}
+@media (max-width: 760px) {
+  .feature-section { padding: 68px 0 72px; }
+  .feature-heading { margin-bottom: 24px; }
+  .feature-heading h2 { font-size: clamp(37px,9vw,48px); }
+  .feature-heading > p { font-size: 14px; }
+  .feature-platforms { grid-template-columns: 1fr; gap: 0; }
+  .platform-detail { min-height: auto; padding: 21px; }
+  .platform-detail h3 { margin-top: 17px; font-size: 22px; }
+  .platform-detail > p { font-size: 14px; }
+  .platform-detail li { font-size: 13px; }
+  .account-bridge { display: grid; grid-template-columns: 1fr 32px 1fr; grid-template-rows: 30px auto; align-items: center; gap: 1px 10px; padding: 8px 5px; }
+  .bridge-line { width: auto; height: 1px; }
+  .bridge-line:first-child { grid-column: 1; grid-row: 1; }
+  .bridge-mark { grid-column: 2; grid-row: 1; }
+  .bridge-line:last-child { grid-column: 3; grid-row: 1; }
+  .bridge-caption { grid-column: 1/-1; grid-row: 2; }
+  .status-section { padding: 65px 0 70px; }
+  .status-inner { grid-template-columns: 1fr; gap: 23px; }
+  .status-copy h2 { font-size: 40px; }
+  .status-copy p { font-size: 14px; }
+  .status-key { flex-flow: row wrap; gap: 9px 17px; margin-top: 16px; font-size: 11px; }
+  .status-row { padding: 15px; }
+  .status-main h3 { font-size: 13px; }
+  .status-main p { font-size: 12px; }
+  .state-label { font-size: 9px; }
+  .download-section { padding: 52px 0 58px; }
+  .download-content { grid-template-columns: 1fr; gap: 18px; padding: 19px; }
+  .download-heading h2 { font-size: 40px; }
+  .download-heading > p { max-width: 480px; font-size: 14px; }
+  .download-grid { gap: 10px; }
+  .download-card { padding: 16px; }
+  .download-card h3 { font-size: 18px; }
+  .download-card > p { font-size: 12px; }
+  .file-note,.file-note b { font-size: 10px; }
+  .download-footer { font-size: 10px; }
+  .footer-main p { font-size: 10px; }
+  .back-top { font-size: 9px; }
+  .footer-bottom { font-size: 9px; }
+}
+@media (max-width: 420px) {
+  .feature-heading h2 { font-size: 36px; }
+  .platform-detail { padding: 18px; }
+  .status-main h3 { font-size: 12px; }
+  .status-main p { font-size: 12px; }
+  .download-content { padding: 15px; }
+  .download-grid { grid-template-columns: 1fr; }
+  .download-footer { align-items: flex-start; flex-direction: column; }
+}
