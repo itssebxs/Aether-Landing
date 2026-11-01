@@ -11,12 +11,12 @@ Sitio estático adaptable. `index.html`, `style.css`, `script.js` y `assets/` co
 
 ## Descargas vigentes
 
-Los dos botones usan los assets de la release GitHub `Aether-2.4.9`:
+Los dos botones usan los assets de la release GitHub `Aether-2.4.10`:
 
-- Windows x64: `AetherSetup-2.4.9-x64.exe`, instalador versionado 2.4.9. Aether solicita permisos de administrador para controlar aplicaciones elevadas; Windows mostrará el aviso de UAC al abrirlo. El escritorio seguro de UAC no es controlable remotamente.
+- Windows x64: `AetherSetup-2.4.10-x64.exe`, instalador versionado 2.4.10. Aether solicita permisos de administrador para controlar aplicaciones elevadas; Windows puede mostrar el aviso de UAC al abrirlo manualmente. El inicio automático usa una tarea elevada y abre Aether minimizado en la bandeja. El escritorio seguro de UAC no es controlable remotamente.
 - Android: `Aether-Android-0.1.2-3.apk`, versión interna `0.1.2+3`.
 
-Los enlaces vigentes apuntan a la [release pública Aether-2.4.9](https://github.com/itssebxs/Aether-Landing/releases/tag/Aether-2.4.9). Verifica nombres, tamaños y SHA-256 contra `../releases/CURRENT.md` antes de modificarlos. Los binarios no deben añadirse al historial Git de la landing.
+Los enlaces vigentes apuntan a la [release pública Aether-2.4.10](https://github.com/itssebxs/Aether-Landing/releases/tag/Aether-2.4.10). Verifica nombres, tamaños y SHA-256 contra `../releases/CURRENT.md` antes de modificarlos. Los binarios no deben añadirse al historial Git de la landing.
 
 ## Estado de funciones
 

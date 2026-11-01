@@ -24,9 +24,9 @@ Si no se pudo crear la release o cargar cualquier archivo, no publiques la landi
 
 ## Release publicada actualmente
 
-- Release: <https://github.com/itssebxs/Aether-Landing/releases/tag/Aether-2.4.9>
+- Release: <https://github.com/itssebxs/Aether-Landing/releases/tag/Aether-2.4.10>
 - Landing: <https://aetherbeta.vercel.app/>
-- Windows: `AetherSetup-2.4.9-x64.exe`, 120.951.387 bytes; SHA-256 `35C1AEF0316B8857C6601D16713722715AAB11DDB070E55CF479619A6A03B617`.
+- Windows: `AetherSetup-2.4.10-x64.exe`, 120.971.174 bytes; SHA-256 `26951A7E6CCC68EF764B0AC3AC148E0FAC013E4B06FB489E5DFD8EE650E59444`.
 - Android: `Aether-Android-0.1.2-3.apk`, 91.975.521 bytes; SHA-256 `928B823BCD633B2FC74AC14EAFB3F3D399C12686A4546453CE57E8044EEF90A9`.
 
 ## Limpieza segura de builds
