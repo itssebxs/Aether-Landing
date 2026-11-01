@@ -7,6 +7,7 @@ Sitio estático adaptable. `index.html`, `style.css`, `script.js` y `assets/` co
 - Repositorio independiente de la aplicación: `itssebxs/Aether-Landing`, rama `main`.
 - Sitio público configurado por el repositorio: <https://aetherbeta.vercel.app/>. El despliegue web se activa al publicar cambios en `main`, si la conexión del proyecto de Vercel sigue habilitada.
 - `landing/.git` es su repositorio Git; el directorio padre no tiene un repositorio Git común.
+- El procedimiento completo de publicación está en [PUBLISHING.md](PUBLISHING.md). Publica primero la release y verifica sus dos assets; después modifica los enlaces, haz push a `main` y comprueba el estado de Vercel.
 
 ## Descargas vigentes
 
@@ -15,7 +16,7 @@ Los dos botones usan los assets de la release GitHub `Aether-2.4.5`:
 - Windows x64: `AetherSetup-2.4.5-x64.exe`, instalador versionado 2.4.5. Incluye un cursor visual integrado en los cuadros de Mirar PC y corrige la entrada duplicada de inicio con Windows.
 - Android: `Aether-Android-2026-10-30.apk`, versión interna `0.1.0+1`.
 
-Los enlaces solo funcionan cuando ambos assets se han publicado en esa release. Verifica nombres, tamaños y SHA-256 contra `../releases/CURRENT.md` antes de actualizarlos. Los binarios no deben añadirse al historial Git de la landing.
+Los enlaces vigentes apuntan a la [release pública Aether-2.4.5](https://github.com/itssebxs/Aether-Landing/releases/tag/Aether-2.4.5). Verifica nombres, tamaños y SHA-256 contra `../releases/CURRENT.md` antes de modificarlos. Los binarios no deben añadirse al historial Git de la landing.
 
 ## Estado de funciones
 
