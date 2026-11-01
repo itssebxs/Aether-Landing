@@ -1,90 +1,112 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aether - Control Total de tu PC</title>
-    <link rel="icon" type="image/x-icon" href="assets/icon.ico">
-    <meta name="description" content="Aether conecta tu celular con tu PC en tiempo real con latencia casi nula. Descarga el instalador para Windows y el APK para Android.">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Outfit:wght@500;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-    <!-- FontAwesome para iconos -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#08090d">
+  <title>Aether — Tu PC, a tu manera</title>
+  <meta name="description" content="Conecta Aether para Windows y Android. Control remoto, comandos y acceso a tu PC desde el móvil, con el mismo estilo de la nueva app.">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Aether — Tu PC, a tu manera">
+  <meta property="og:description" content="Un puente sencillo entre tu PC Windows y tu móvil Android.">
+  <meta property="og:image" content="assets/hero_bg.png">
+  <link rel="icon" href="assets/icon.ico" sizes="any">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="bg-overlay"></div>
-    
-    <nav class="navbar">
-        <div class="container nav-container">
-            <div class="logo"><img src="assets/icon.ico" alt="Aether Logo" style="height: 30px; vertical-align: middle; margin-right: 10px;">Aether</div>
-            <ul class="nav-links">
-                <li><a href="#features">Características</a></li>
-                <li><a href="#download" class="nav-btn">Descargar</a></li>
-            </ul>
-        </div>
+  <div class="ambient ambient-one" aria-hidden="true"></div>
+  <div class="ambient ambient-two" aria-hidden="true"></div>
+
+  <header class="site-header" id="top">
+    <nav class="nav wrap" aria-label="Navegación principal">
+      <a class="brand" href="#top" aria-label="Aether, inicio">
+        <img src="assets/icon.ico" alt="" width="34" height="34">
+        <span>AETHER</span><span class="brand-dot">.</span>
+      </a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="nav-links" aria-label="Abrir menú">
+        <span></span><span></span>
+      </button>
+      <div class="nav-links" id="nav-links">
+        <a href="#producto">Producto</a>
+        <a href="#funciones">Funciones</a>
+        <a href="#estado">Estado</a>
+        <a class="nav-download" href="#descargas">Descargar <span aria-hidden="true">↗</span></a>
+      </div>
     </nav>
+  </header>
 
-    <header class="hero">
-        <div class="container hero-content">
-            <h1 class="hero-title">Tu PC, <br><span class="gradient-text">En la Palma de tu Mano.</span></h1>
-            <p class="hero-subtitle">Conecta tu celular con tu PC en tiempo real. Usa tu dispositivo móvil como trackpad, mira la pantalla de tu computadora sin latencia y lanza macros al instante. Todo en red local o en la nube.</p>
-            
-            <div class="hero-actions" id="download">
-                <a href="https://github.com/itssebxs/Aether-Landing/releases/download/V3.0.0/Aether.exe" class="btn btn-primary" id="btn-win">
-                    <i class="fa-brands fa-windows"></i> Descargar .exe (Windows)
-                </a>
-                <a href="https://github.com/itssebxs/Aether-Landing/releases/download/V3.0.0/Aether.apk" class="btn btn-secondary" id="btn-apk">
-                    <i class="fa-brands fa-android"></i> Descargar .apk (Android)
-                </a>
-            </div>
+  <main>
+    <section class="hero wrap" id="producto">
+      <div class="hero-copy reveal">
+        <div class="eyebrow"><span class="live-dot"></span> WINDOWS + ANDROID <span class="eyebrow-sep">/</span> VERSIÓN ACTUAL</div>
+        <h1>Tu PC,<br><span class="accent-text">a tu manera.</span></h1>
+        <p class="hero-lede">Aether conecta tu móvil con el escritorio para que controles, organices y accedas a lo que usas, sin complicarte.</p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="#descargas">Conocer Aether <span aria-hidden="true">↓</span></a>
+          <a class="text-link" href="#funciones">Explorar funciones <span aria-hidden="true">→</span></a>
         </div>
-    </header>
+        <div class="platform-note"><span class="platform-icon">⊞</span> Windows <span class="note-divider">·</span><span class="platform-icon android-icon">◉</span> Android</div>
+      </div>
 
-    <section id="features" class="features">
-        <div class="container">
-            <h2 class="section-title">El poder de la conexión <span class="gradient-text">Híbrida</span></h2>
-            
-            <div class="feature-grid">
-                <div class="feature-card reveal">
-                    <div class="feature-icon"><i class="fa-solid fa-bolt"></i></div>
-                    <h3>Latencia Cero</h3>
-                    <p>Comunicación optimizada vía WebRTC y WebSockets LAN. Siente cómo tu cursor responde en tiempo real a tus dedos sin ningún retraso perceptible.</p>
-                </div>
-                
-                <div class="feature-card reveal">
-                    <div class="feature-icon"><i class="fa-solid fa-display"></i></div>
-                    <h3>Ver PC en Móvil <span style="font-size: 0.8em; color: #00f0ff;">(100% Pulido)</span></h3>
-                    <p>Visualiza tu PC desde tu celular a 90 FPS impulsado por aceleración de hardware DirectX, permitiendo interactuar directamente tocando la pantalla.</p>
-                </div>
-                
-                <div class="feature-card reveal">
-                    <div class="feature-icon"><i class="fa-solid fa-gamepad"></i></div>
-                    <h3>Remote Pad <span style="font-size: 0.8em; color: #00f0ff;">(100% Pulido)</span></h3>
-                    <p>Trackpad avanzado con cero-drift, control de volumen, brillo nativo, atajos de teclado y sistema multimedia con combinaciones de teclas con 1 clic.</p>
-                </div>
-                
-                <div class="feature-card reveal">
-                    <div class="feature-icon"><i class="fa-solid fa-mobile-screen"></i></div>
-                    <h3>Ver Móvil en PC <span style="font-size: 0.8em; color: #a020f0;">(BETA)</span></h3>
-                    <p>Comparte la cámara o pantalla de tu teléfono hacia tu PC. Esta función es un Work-in-Progress y seguimos puliéndola, pero ya la puedes probar.</p>
-                </div>
-                
-                <div class="feature-card reveal">
-                    <div class="feature-icon"><i class="fa-solid fa-layer-group"></i></div>
-                    <h3>Macropacks</h3>
-                    <p>Crea centros de comandos interactivos. Organiza tus aplicaciones y herramientas y lánzalas remotamente al instante con nuestro Action Center.</p>
-                </div>
-            </div>
+      <div class="hero-art reveal" aria-label="Vista ilustrativa de Aether conectando un PC y un móvil">
+        <div class="art-glow"></div>
+        <div class="connection-line"><span></span><span></span><span></span></div>
+        <div class="desktop-device">
+          <div class="device-top"><span class="window-lights"><i></i><i></i><i></i></span><span class="window-title">AETHER DESKTOP</span><span class="window-status"><i></i> EN LÍNEA</span></div>
+          <div class="desktop-body">
+            <aside class="mock-sidebar"><div class="mock-brand"><img src="assets/icon.ico" alt="" width="24" height="24"><span>AETHER</span></div><div class="mock-nav selected"><b>◈</b> Panel</div><div class="mock-nav"><b>⌘</b> Comandos</div><div class="mock-nav"><b>▦</b> Módulos</div><div class="mock-profile"><span class="avatar">A</span><span>Mi espacio<small>Cuenta conectada</small></span></div></aside>
+            <div class="mock-content"><div class="mock-greeting">TU ESPACIO <span>● CONECTADO</span></div><div class="mock-heading">Todo en su sitio.</div><div class="mock-subheading">Tus herramientas, listas cuando las necesitas.</div><div class="mock-card-row"><div class="mock-card command-card"><div class="mock-card-icon purple">⌘</div><strong>Comandos</strong><small>Accesos rápidos</small><span class="mock-command"><i>◉</i> Abrir navegador</span><span class="mock-command"><i>▧</i> Mi espacio de trabajo</span></div><div class="mock-card status-card"><div class="mock-card-icon green">↗</div><strong>Tu dispositivo</strong><small>Windows · Activo</small><div class="status-bar"><span></span></div><small class="status-caption">Conexión lista</small></div></div><div class="mock-bottom"><span>▣ <b>Espacio personal</b></span><span>Última sincronización <b>ahora</b></span></div></div>
+          </div>
+          <div class="device-base"></div>
         </div>
+        <div class="phone-device"><div class="phone-notch"></div><div class="phone-screen"><div class="phone-top"><span>9:41</span><span>●●●</span></div><div class="phone-brand"><img src="assets/icon.ico" alt="" width="27" height="27"><span>AETHER</span><i>●</i></div><div class="phone-greeting">HOLA DE NUEVO</div><div class="phone-title">Tu espacio<br>conectado.</div><div class="phone-connection"><i></i><span>PC de Luis<small>En línea</small></span><b>···</b></div><div class="phone-section">ACCESO RÁPIDO</div><div class="phone-tiles"><div><b>⌖</b><small>RemotePad</small></div><div><b>⌘</b><small>Comandos</small></div><div><b>▣</b><small>Mirar PC</small></div><div class="tile-muted"><b>◉</b><small>Drive · pronto</small></div></div><div class="phone-tab"><span>⌂<small>Inicio</small></span><span>▦<small>Equipos</small></span><span>⚙<small>Ajustes</small></span></div></div></div>
+        <div class="art-caption"><span class="caption-orbit">✳</span><span>Un espacio.<br><b>Tus dispositivos.</b></span></div>
+      </div>
+      <a class="scroll-cue" href="#funciones" aria-label="Desplazarse a funciones"><span></span> DESLIZA PARA EXPLORAR</a>
     </section>
 
-    <footer>
-        <div class="container footer-content">
-            <div class="footer-logo">Aether</div>
-            <p>&copy; 2026 Zentauri Studio. Todos los derechos reservados.</p>
-        </div>
-    </footer>
+    <section class="section wrap" id="funciones">
+      <div class="section-heading reveal"><div><div class="eyebrow">HECHO PARA TU DÍA A DÍA</div><h2>Menos pasos.<br><span class="accent-text">Más control.</span></h2></div><p>Aether reúne tus accesos y herramientas en una experiencia coherente entre el escritorio y el móvil.</p></div>
+      <div class="feature-grid">
+        <article class="feature-card feature-large reveal"><div class="feature-icon purple-icon">⌖</div><div class="feature-meta">01 <span>CONTROL</span></div><h3>RemotePad</h3><p>Usa el móvil como panel táctil y maneja acciones frecuentes del PC, como volumen, brillo y atajos.</p><div class="feature-visual trackpad-visual"><span class="trackpad-ring"></span><span class="trackpad-cursor">↖</span><span class="trackpad-label">DESLIZA PARA MOVER</span><span class="trackpad-actions"><i>◁</i><i>▰</i><i>▷</i></span></div></article>
+        <article class="feature-card reveal"><div class="feature-icon amber-icon">⌘</div><div class="feature-meta">02 <span>PRODUCTIVIDAD</span></div><h3>Comandos y módulos</h3><p>Organiza aplicaciones, enlaces y accesos rápidos en tus propios grupos.</p><div class="mini-list"><span><i>◉</i> Navegador</span><span><i>▧</i> Espacio de trabajo</span><span><i>♫</i> Música <b>+2</b></span></div></article>
+        <article class="feature-card reveal"><div class="feature-icon green-icon">◉</div><div class="feature-meta">03 <span>CONEXIÓN</span></div><h3>Tu sesión, tus equipos</h3><p>Inicia sesión con la misma cuenta para vincular tu móvil y tu PC.</p><div class="linked-devices"><span class="device-symbol">▰</span><span class="link-dash"></span><span class="device-symbol mobile-symbol">▯</span><span class="linked-status"><i></i> SESIÓN ACTIVA</span></div></article>
+        <article class="feature-card reveal"><div class="feature-icon blue-icon">▣</div><div class="feature-meta">04 <span>PANTALLA</span></div><h3>Mira tu PC desde el móvil</h3><p>Abre la pantalla del escritorio en Android cuando necesites consultar lo que ocurre en tu equipo.</p><span class="feature-tag">DISPONIBLE · AETHER ELITE</span></article>
+      </div>
+    </section>
 
-    <script src="script.js"></script>
+    <section class="status-section" id="estado">
+      <div class="wrap status-inner">
+        <div class="status-copy reveal"><div class="eyebrow">TRANSPARENCIA, SIEMPRE</div><h2>Lo que ya está.<br><span class="accent-text">Lo que viene.</span></h2><p>Preferimos contarte con claridad qué está disponible y qué sigue en desarrollo.</p></div>
+        <div class="status-list reveal">
+          <div class="status-row"><span class="state-dot ready"></span><span class="status-title">RemotePad y accesos rápidos</span><span class="state-label">DISPONIBLE</span></div>
+          <div class="status-row"><span class="state-dot ready"></span><span class="status-title">Conexión de escritorio y sesión</span><span class="state-label">DISPONIBLE</span></div>
+          <div class="status-row"><span class="state-dot elite"></span><span class="status-title">Ver la pantalla del PC en Android</span><span class="state-label">AETHER ELITE</span></div>
+          <div class="status-row"><span class="state-dot beta"></span><span class="status-title">Espejo Android → PC con toque remoto</span><span class="state-label">EXPERIMENTAL</span></div>
+          <div class="status-row"><span class="state-dot soon"></span><span class="status-title">Aether Drive</span><span class="state-label">PRÓXIMAMENTE</span></div>
+          <div class="status-row"><span class="state-dot soon"></span><span class="status-title">Control general del móvil desde el PC</span><span class="state-label">NO DISPONIBLE</span></div>
+          <p class="status-footnote">El espejo se inicia desde Android y requiere permiso de captura. El toque remoto dentro de esa vista requiere activar el servicio de accesibilidad de Aether.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="download-section wrap" id="descargas">
+      <div class="download-heading reveal"><div class="eyebrow">EMPIEZA CON AETHER</div><h2>Tu siguiente paso,<br><span class="accent-text">a un clic.</span></h2><p>Instala Aether en Windows y Android. Inicia sesión con la misma cuenta en ambos.</p></div>
+      <div class="download-grid reveal">
+        <article class="download-card windows-card"><div class="download-platform"><span class="download-icon">⊞</span><span>PARA WINDOWS</span><i class="available-pill"><b></b> DISPONIBLE</i></div><h3>Aether Desktop</h3><p>Instalador para Windows x64. Puedes elegir dónde instalarlo.</p><div class="version-line"><span>Versión</span><strong>2.4.3</strong><span class="version-date">31 OCT 2026</span></div><a class="button button-primary download-button" href="https://github.com/itssebxs/Aether-Landing/releases/download/Aether-2.4.3/AetherSetup-2.4.3-x64.exe" download>Descargar instalador <span aria-hidden="true">↓</span></a><small class="file-note">AetherSetup-2.4.3-x64.exe · 115 MiB</small></article>
+        <article class="download-card android-card"><div class="download-platform"><span class="download-icon android">◉</span><span>PARA ANDROID</span><i class="available-pill"><b></b> DISPONIBLE</i></div><h3>Aether Mobile</h3><p>APK de Android. Descárgalo e instálalo en tu teléfono.</p><div class="version-line"><span>Versión</span><strong>0.1.0+1</strong><span class="version-date">30 OCT 2026</span></div><a class="button button-outline download-button" href="https://github.com/itssebxs/Aether-Landing/releases/download/Aether-2.4.3/Aether-Android-2026-10-30.apk" download>Descargar APK <span aria-hidden="true">↓</span></a><small class="file-note">Aether-Android-2026-10-30.apk · 87.7 MiB</small></article>
+      </div>
+      <p class="download-disclaimer reveal">El instalador de Windows no tiene firma digital; Windows podría mostrar una advertencia del editor.</p>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap footer-main"><a class="brand" href="#top"><img src="assets/icon.ico" alt="" width="30" height="30"><span>AETHER</span><span class="brand-dot">.</span></a><p>Un puente sencillo entre tu PC y tu móvil.</p><a class="back-top" href="#top">VOLVER ARRIBA ↑</a></div>
+    <div class="wrap footer-bottom"><span>© 2026 Aether · Zentauri Studio</span><span>Windows + Android</span></div>
+  </footer>
+  <script src="script.js" defer></script>
 </body>
 </html>
