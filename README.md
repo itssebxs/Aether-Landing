@@ -21,4 +21,4 @@ Los enlaces solo funcionan cuando ambos assets se han publicado en esa release. 
 
 La fuente de verdad es el código de `../desktop/` y `../mobile/`, no las ilustraciones ni el copy de marketing. Drive está pendiente. El espejo Android → PC y el toque remoto en ese espejo son experimentales: la transmisión se inicia en el móvil con permiso de captura y el toque requiere activar el servicio de accesibilidad de Aether. El control general del móvil desde el PC no está disponible. Revisa el código y conserva estas limitaciones al editar el texto público.
 
-La página sigue el diseño oscuro grafito y acento violeta de Aether. Los mockups del hero son HTML/CSS propio; conserva sus alternativas accesibles al cambiar el diseño.
+La página sigue el diseño grafito y violeta de Aether. `assets/aether-desktop-commands.webp` es una captura real del panel Comandos de Aether Desktop, recortada para excluir el perfil local. `assets/aether-mobile-app.png` es el icono original de Android. No reconstruyas ni presentes un mockup inventado como si fuera la pantalla real de Flutter; no había un emulador/dispositivo Android disponible al capturar el escritorio.
